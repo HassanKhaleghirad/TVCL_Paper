@@ -1,0 +1,61 @@
+table,dataset,condition,model,seed,tp,fp,tn,fn,auc,pr_auc
+attack,intas,constantPositionOffset,TVCL,0,6,1,44,2,0.9472222222222222,0.8815178571428571
+attack,intas,constantPositionOffset,GBM (msg features),0,7,0,45,1,1.0,1.0
+attack,intas,constantPositionOffset,LogReg (msg features),0,8,1,44,0,1.0,1.0
+attack,intas,constantPositionOffset,TVCL,1,5,0,45,3,0.9416666666666667,0.848537784679089
+attack,intas,constantPositionOffset,GBM (msg features),1,5,0,45,3,1.0,1.0
+attack,intas,constantPositionOffset,LogReg (msg features),1,8,0,45,0,1.0,1.0
+attack,intas,constantPositionOffset,TVCL,2,8,9,36,0,0.9416666666666667,0.6277597402597402
+attack,intas,constantPositionOffset,GBM (msg features),2,2,0,45,6,1.0,1.0
+attack,intas,constantPositionOffset,LogReg (msg features),2,6,1,44,2,0.9833333333333334,0.9202741702741702
+attack,intas,constantPositionOffset,TVCL,3,7,3,42,1,0.9666666666666666,0.8194826007326007
+attack,intas,constantPositionOffset,GBM (msg features),3,5,0,45,3,1.0,1.0
+attack,intas,constantPositionOffset,LogReg (msg features),3,8,0,45,0,1.0,1.0
+attack,intas,constantPositionOffset,TVCL,4,7,21,24,1,0.8444444444444444,0.5614355506070494
+attack,intas,constantPositionOffset,GBM (msg features),4,5,0,45,3,0.9944444444444445,0.9704861111111112
+attack,intas,constantPositionOffset,LogReg (msg features),4,8,0,45,0,1.0,1.0
+attack,intas,constantPositionOffset,TVCL,5,4,0,45,4,0.9055555555555557,0.8240546218487395
+attack,intas,constantPositionOffset,GBM (msg features),5,7,0,45,1,1.0,1.0
+attack,intas,constantPositionOffset,LogReg (msg features),5,7,1,44,1,0.9944444444444445,0.9704861111111112
+attack,intas,constantPositionOffset,TVCL,6,8,19,26,0,0.9944444444444445,0.9704861111111112
+attack,intas,constantPositionOffset,GBM (msg features),6,8,0,45,0,1.0,1.0
+attack,intas,constantPositionOffset,LogReg (msg features),6,8,4,41,0,1.0,1.0
+attack,intas,constantPositionOffset,TVCL,7,8,25,20,0,0.9583333333333333,0.7392857142857143
+attack,intas,constantPositionOffset,GBM (msg features),7,6,0,45,2,1.0,1.0
+attack,intas,constantPositionOffset,LogReg (msg features),7,8,2,43,0,0.9916666666666667,0.959375
+attack,intas,constantPositionOffset,TVCL,8,8,3,42,0,0.9916666666666667,0.959375
+attack,intas,constantPositionOffset,GBM (msg features),8,7,0,45,1,1.0,1.0
+attack,intas,constantPositionOffset,LogReg (msg features),8,1,0,45,7,1.0,1.0
+attack,intas,constantPositionOffset,TVCL,9,8,26,19,0,0.8444444444444446,0.7336941721132897
+attack,intas,constantPositionOffset,GBM (msg features),9,7,0,45,1,1.0,1.0
+attack,intas,constantPositionOffset,LogReg (msg features),9,8,32,13,0,1.0,1.0
+attack,intas,constantPositionOffset,TVCL,10,8,32,13,0,0.8527777777777777,0.752765996680804
+attack,intas,constantPositionOffset,GBM (msg features),10,8,8,37,0,1.0,1.0
+attack,intas,constantPositionOffset,LogReg (msg features),10,2,0,45,6,1.0,1.0
+attack,intas,constantPositionOffset,TVCL,11,6,0,45,2,0.9944444444444445,0.9704861111111112
+attack,intas,constantPositionOffset,GBM (msg features),11,8,0,45,0,1.0,1.0
+attack,intas,constantPositionOffset,LogReg (msg features),11,2,0,45,6,0.9972222222222222,0.9861111111111112
+attack,intas,constantPositionOffset,TVCL,12,8,4,41,0,0.9972222222222222,0.9861111111111112
+attack,intas,constantPositionOffset,GBM (msg features),12,7,0,45,1,1.0,1.0
+attack,intas,constantPositionOffset,LogReg (msg features),12,8,2,43,0,1.0,1.0
+attack,intas,constantPositionOffset,TVCL,13,8,11,34,0,1.0,1.0
+attack,intas,constantPositionOffset,GBM (msg features),13,8,0,45,0,1.0,1.0
+attack,intas,constantPositionOffset,LogReg (msg features),13,8,2,43,0,1.0,1.0
+attack,intas,constantPositionOffset,TVCL,14,8,25,20,0,1.0,1.0
+attack,intas,constantPositionOffset,GBM (msg features),14,4,0,45,4,1.0,1.0
+attack,intas,constantPositionOffset,LogReg (msg features),14,8,7,38,0,1.0,1.0
+attack,intas,constantPositionOffset,TVCL,15,3,4,41,5,0.6166666666666667,0.3795513044280739
+attack,intas,constantPositionOffset,GBM (msg features),15,8,0,45,0,1.0,1.0
+attack,intas,constantPositionOffset,LogReg (msg features),15,8,1,44,0,1.0,1.0
+attack,intas,constantPositionOffset,TVCL,16,6,2,43,2,0.9583333333333333,0.8784722222222222
+attack,intas,constantPositionOffset,GBM (msg features),16,7,0,45,1,1.0,1.0
+attack,intas,constantPositionOffset,LogReg (msg features),16,7,0,45,1,1.0,1.0
+attack,intas,constantPositionOffset,TVCL,17,7,10,35,1,0.8111111111111111,0.606340718105424
+attack,intas,constantPositionOffset,GBM (msg features),17,8,0,45,0,1.0,1.0
+attack,intas,constantPositionOffset,LogReg (msg features),17,8,4,41,0,1.0,1.0
+attack,intas,constantPositionOffset,TVCL,18,8,15,30,0,0.9944444444444445,0.975
+attack,intas,constantPositionOffset,GBM (msg features),18,7,3,42,1,0.9777777777777777,0.9375
+attack,intas,constantPositionOffset,LogReg (msg features),18,8,3,42,0,1.0,1.0
+attack,intas,constantPositionOffset,TVCL,19,5,6,39,3,0.788888888888889,0.4174812030075188
+attack,intas,constantPositionOffset,GBM (msg features),19,8,0,45,0,1.0,1.0
+attack,intas,constantPositionOffset,LogReg (msg features),19,8,1,44,0,1.0,1.0
