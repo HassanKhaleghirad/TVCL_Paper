@@ -1,0 +1,9 @@
+(.venv) PS C:\Users\hassan\TVCL_NEW\pythonProject1\real_deepseek\OK_MAR> python tvcl_onoff_MAR_F1_MCC.py --data "C:\Users\hassan\TVCL_NEW\pythonProject1\dataset" --seeds 0 --out ablation_test2.csv
+[load] messages=78936  vehicles=814  attack rate=0.194
+[build] snapshots/vehicle: mean=11.76  median=12  frac(>=3)=99.4%  frac(>=4)=99.1%
+0 TVCL (Full) tp/fp/tn/fn=303/100/1433/76 auc=0.922 ap=0.838 f1=0.775 mcc=0.718
+0 w/o MAR tp/fp/tn/fn=304/96/1437/75 auc=0.923 ap=0.838 f1=0.780 mcc=0.725
+0 w/o CSSL tp/fp/tn/fn=284/59/1474/95 auc=0.908 ap=0.849 f1=0.787 mcc=0.739
+0 w/o EAD tp/fp/tn/fn=278/87/1446/101 auc=0.893 ap=0.830 f1=0.747 mcc=0.686
+0 w/o all temporal tp/fp/tn/fn=276/81/1452/103 auc=0.891 ap=0.835 f1=0.750 mcc=0.691
+(.venv) PS C:\Users\hassan\TVCL_NEW\pythonProject1\real_deepseek\OK_MAR>
