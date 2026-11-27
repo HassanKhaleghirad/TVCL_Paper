@@ -7,3 +7,25 @@
 0 w/o EAD tp/fp/tn/fn=278/87/1446/101 auc=0.893 ap=0.830 f1=0.747 mcc=0.686
 0 w/o all temporal tp/fp/tn/fn=276/81/1452/103 auc=0.891 ap=0.835 f1=0.750 mcc=0.691
 (.venv) PS C:\Users\hassan\TVCL_NEW\pythonProject1\real_deepseek\OK_MAR>
+
+
+(.venv) PS C:\Users\hassan\TVCL_NEW\pythonProject1\real_deepseek\OK_MAR> python tvcl_onoff_MAR_F1_MCC.py --data "C:\Users\hassan\TVCL_NEW\pythonProject1\dataset" --seeds 0 --out ablation_test3.csv
+[load] messages=78936  vehicles=814  attack rate=0.194
+[build] snapshots/vehicle: mean=11.76  median=12  frac(>=3)=99.4%  frac(>=4)=99.1%
+0 TVCL (Full) tp/fp/tn/fn=303/26/1507/76 auc=0.946 ap=0.896 f1=0.856 mcc=0.827
+0 w/o MAR tp/fp/tn/fn=303/67/1466/76 auc=0.919 ap=0.839 f1=0.809 mcc=0.763
+0 w/o CSSL tp/fp/tn/fn=316/32/1501/63 auc=0.945 ap=0.905 f1=0.869 mcc=0.840
+0 w/o EAD tp/fp/tn/fn=301/20/1513/78 auc=0.924 ap=0.884 f1=0.860 mcc=0.833
+0 w/o all temporal tp/fp/tn/fn=269/73/1460/110 auc=0.900 ap=0.797 f1=0.746 mcc=0.689
+(.venv) PS C:\Users\hassan\TVCL_NEW\pythonProject1\real_deepseek\OK_MAR>
+0 1 2 3 4 5 6 7 8 9
+
+(.venv) PS C:\Users\hassan\TVCL_NEW\pythonProject1\real_deepseek\OK_MAR> python tvcl_onoff_MAR_F1_MCC.py --data "C:\Users\hassan\TVCL_NEW\pythonProject1\dataset" --seeds 1 --out ablation_test3.csv
+[load] messages=78936  vehicles=814  attack rate=0.194
+[build] snapshots/vehicle: mean=11.76  median=12  frac(>=3)=99.4%  frac(>=4)=99.1%
+1 TVCL (Full) tp/fp/tn/fn=330/23/1495/74 auc=0.956 ap=0.900 f1=0.872 mcc=0.844
+1 w/o MAR tp/fp/tn/fn=327/130/1388/77 auc=0.924 ap=0.848 f1=0.760 mcc=0.693
+1 w/o CSSL tp/fp/tn/fn=347/19/1499/57 auc=0.969 ap=0.929 f1=0.901 mcc=0.878
+1 w/o EAD tp/fp/tn/fn=333/22/1496/71 auc=0.957 ap=0.893 f1=0.877 mcc=0.850
+1 w/o all temporal tp/fp/tn/fn=299/87/1431/105 auc=0.916 ap=0.828 f1=0.757 mcc=0.694
+(.venv) PS C:\Users\hassan\TVCL_NEW\pythonProject1\real_deepseek\OK_MAR>

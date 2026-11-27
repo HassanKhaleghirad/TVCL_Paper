@@ -1,0 +1,35 @@
+Windows PowerShell
+
+Try the new cross-platform PowerShell https://aka.ms/pscore6
+
+(.venv) PS C:\Users\hassan\TVCL_NEW\pythonProject1> python tvcl_real.py --data dataset --diag-only
+messages=78936 senders=814 receivers=841 attacker-senders=24.2%  time span=10798s
+segments=45 tracklets=1054 node-snapshots=8716 (8.27 per tracklet)
+node-snapshots with a long-term view: 5851 (67.1%); tracklets eligible for CSSL: 851 (80.7%)
+(.venv) PS C:\Users\hassan\TVCL_NEW\pythonProject1> python tvcl_real.py --data dataset --seeds 0 1 2 3 4 5 6 7 8 9 --out runs_real.csv
+messages=78936 senders=814 receivers=841 attacker-senders=24.2%  time span=10798s
+segments=45 tracklets=1054 node-snapshots=8716 (8.27 per tracklet)
+node-snapshots with a long-term view: 5851 (67.1%); tracklets eligible for CSSL: 851 (80.7%)
+0 TVCL (Full) tp/fp/tn/fn=272/56/1199/57 auc=0.917 ap=0.881
+0 w/o MAR tp/fp/tn/fn=269/109/1146/60 auc=0.888 ap=0.862
+0 w/o CSSL tp/fp/tn/fn=271/24/1231/58 auc=0.924 ap=0.892
+0 w/o EAD tp/fp/tn/fn=256/77/1178/73 auc=0.872 ap=0.842
+0 GBM (msg features) auc=0.905
+0 LogReg (msg features) auc=0.894
+0 GBM (+own-history) auc=0.942
+1 TVCL (Full) tp/fp/tn/fn=339/44/1287/46 auc=0.943 ap=0.908
+1 w/o MAR tp/fp/tn/fn=336/134/1197/49 auc=0.927 ap=0.887
+1 w/o CSSL tp/fp/tn/fn=334/40/1291/51 auc=0.938 ap=0.891
+1 w/o EAD tp/fp/tn/fn=324/182/1149/61 auc=0.904 ap=0.837
+1 GBM (msg features) auc=0.909
+1 LogReg (msg features) auc=0.922
+1 GBM (+own-history) auc=0.959
+2 TVCL (Full) tp/fp/tn/fn=287/43/1281/44 auc=0.938 ap=0.910
+2 w/o MAR tp/fp/tn/fn=283/87/1237/48 auc=0.930 ap=0.853
+2 w/o CSSL tp/fp/tn/fn=295/73/1251/36 auc=0.933 ap=0.893
+2 w/o EAD tp/fp/tn/fn=284/110/1214/47 auc=0.916 ap=0.869
+2 GBM (msg features) auc=0.929
+2 LogReg (msg features) auc=0.938
+2 GBM (+own-history) auc=0.958
+
+
