@@ -1,31 +1,154 @@
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+Try the new cross-platform PowerShell https://aka.ms/pscore6
+
+(.venv) PS C:\Users\hassan\TVCL_NEW\pythonProject1\real_deepseek\OK_MAR> import tvcl_intas_MAR_OK as T^C
+(.venv) PS C:\Users\hassan\TVCL_NEW\pythonProject1\real_deepseek\OK_MAR> Rename-Item tvcl_intas_MAR_OK.py tvcl_intas.py
 (.venv) PS C:\Users\hassan\TVCL_NEW\pythonProject1\real_deepseek\OK_MAR> python tvcl_onoff_MAR_F1_MCC.py --data "C:\Users\hassan\TVCL_NEW\pythonProject1\dataset" --seeds 0 --out ablation_test2.csv
 [load] messages=78936  vehicles=814  attack rate=0.194
+[build] snapshots/vehicle: mean=11.76  median=12  frac(>=3)=99.4%  frac(>=4)=99.1%
+Traceback (most recent call last):
+  File "C:\Users\hassan\TVCL_NEW\pythonProject1\real_deepseek\OK_MAR\tvcl_onoff_MAR_F1_MCC.py", line 88, in <module>
+    main()
+  File "C:\Users\hassan\TVCL_NEW\pythonProject1\real_deepseek\OK_MAR\tvcl_onoff_MAR_F1_MCC.py", line 54, in main
+    r = T.run(D, sd, epochs=a.epochs, **kw)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hassan\TVCL_NEW\pythonProject1\real_deepseek\OK_MAR\tvcl_intas.py", line 271, in run
+    loss = cssl_loss(net(X, A, W, M), M, tr_nodes)
+                     ^^^^^^^^^^^^^^^
+  File "C:\Users\hassan\PycharmProjects\AOC-IDS\.venv\Lib\site-packages\torch\nn\modules\module.py", line 1783, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hassan\TVCL_NEW\pythonProject1\real_deepseek\OK_MAR\tvcl_intas.py", line 213, in forward
+    alpha = alpha * gate
+            ~~~~~~^~~~~~
+RuntimeError: The size of tensor a (814) must match the size of tensor b (12) at non-singleton dimension 2
+(.venv) PS C:\Users\hassan\TVCL_NEW\pythonProject1\real_deepseek\OK_MAR> python tvcl_onoff_MAR_F1_MCC.py --data "C:\Users\hassan\TVCL_NEW\pythonProject1\dataset" --seeds 0 --out ab[load] messages=78936  vehicles=814  attack rate=0.194
 [build] snapshots/vehicle: mean=11.76  median=12  frac(>=3)=99.4%  frac(>=4)=99.1%
 0 TVCL (Full) tp/fp/tn/fn=303/100/1433/76 auc=0.922 ap=0.838 f1=0.775 mcc=0.718
 0 w/o MAR tp/fp/tn/fn=304/96/1437/75 auc=0.923 ap=0.838 f1=0.780 mcc=0.725
 0 w/o CSSL tp/fp/tn/fn=284/59/1474/95 auc=0.908 ap=0.849 f1=0.787 mcc=0.739
 0 w/o EAD tp/fp/tn/fn=278/87/1446/101 auc=0.893 ap=0.830 f1=0.747 mcc=0.686
 0 w/o all temporal tp/fp/tn/fn=276/81/1452/103 auc=0.891 ap=0.835 f1=0.750 mcc=0.691
-(.venv) PS C:\Users\hassan\TVCL_NEW\pythonProject1\real_deepseek\OK_MAR>
-
-
+(.venv) PS C:\Users\hassan\TVCL_NEW\pythonProject1\real_deepseek\OK_MAR> python tvcl_onoff_MAR_F1_MCC.py --data "C:\Users\hassan\TVCL_NEW\pythonProject1\dataset" --seeds 0 --out ablation_test3.csv
+Traceback (most recent call last):
+  File "C:\Users\hassan\TVCL_NEW\pythonProject1\real_deepseek\OK_MAR\tvcl_onoff_MAR_F1_MCC.py", line 88, in <module>
+    main()
+  File "C:\Users\hassan\TVCL_NEW\pythonProject1\real_deepseek\OK_MAR\tvcl_onoff_MAR_F1_MCC.py", line 52, in main
+    D = T.build(df, sd, min_snaps_assert=(sd == a.seeds[0]))
+        ^^^^^^^
+AttributeError: module 'tvcl_intas_new' has no attribute 'build'
 (.venv) PS C:\Users\hassan\TVCL_NEW\pythonProject1\real_deepseek\OK_MAR> python tvcl_onoff_MAR_F1_MCC.py --data "C:\Users\hassan\TVCL_NEW\pythonProject1\dataset" --seeds 0 --out ablation_test3.csv
 [load] messages=78936  vehicles=814  attack rate=0.194
 [build] snapshots/vehicle: mean=11.76  median=12  frac(>=3)=99.4%  frac(>=4)=99.1%
+Traceback (most recent call last):
+  File "C:\Users\hassan\TVCL_NEW\pythonProject1\real_deepseek\OK_MAR\tvcl_onoff_MAR_F1_MCC.py", line 88, in <module>
+    main()
+  File "C:\Users\hassan\TVCL_NEW\pythonProject1\real_deepseek\OK_MAR\tvcl_onoff_MAR_F1_MCC.py", line 54, in main
+    r = T.run(D, sd, epochs=a.epochs, **kw)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hassan\TVCL_NEW\pythonProject1\real_deepseek\OK_MAR\tvcl_intas_new.py", line 263, in run
+    loss = cssl_loss(net(X, A, W, M), M, tr_nodes)
+                     ^^^^^^^^^^^^^^^
+  File "C:\Users\hassan\PycharmProjects\AOC-IDS\.venv\Lib\site-packages\torch\nn\modules\module.py", line 1783, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "C:\Users\hassan\PycharmProjects\AOC-IDS\.venv\Lib\site-packages\torch\nn\modules\module.py", line 1794, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hassan\TVCL_NEW\pythonProject1\real_deepseek\OK_MAR\tvcl_intas_new.py", line 205, in forward
+    alpha = alpha * gate
+            ~~~~~~^~~~~~
+RuntimeError: The size of tensor a (814) must match the size of tensor b (12) at non-singleton dimension 2
+(.venv) PS C:\Users\hassan\TVCL_NEW\pythonProject1\real_deepseek\OK_MAR> python tvcl_onoff_MAR_F1_MCC.py --data "C:\Users\hassan\TVCL_NEW\pythonProject1\dataset" --seeds 0 --out ablation_test3.csv
+[load] messages=78936  vehicles=814  attack rate=0.194
+[build] snapshots/vehicle: mean=11.76  median=12  frac(>=3)=99.4%  frac(>=4)=99.1%
+Traceback (most recent call last):
+  File "C:\Users\hassan\TVCL_NEW\pythonProject1\real_deepseek\OK_MAR\tvcl_onoff_MAR_F1_MCC.py", line 88, in <module>
+    main()
+  File "C:\Users\hassan\TVCL_NEW\pythonProject1\real_deepseek\OK_MAR\tvcl_onoff_MAR_F1_MCC.py", line 54, in main
+    r = T.run(D, sd, epochs=a.epochs, **kw)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hassan\TVCL_NEW\pythonProject1\real_deepseek\OK_MAR\tvcl_intas_new.py", line 266, in run
+    loss = cssl_loss(net(X, A, W, M), M, tr_nodes)
+                     ^^^^^^^^^^^^^^^
+  File "C:\Users\hassan\PycharmProjects\AOC-IDS\.venv\Lib\site-packages\torch\nn\modules\module.py", line 1783, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "C:\Users\hassan\PycharmProjects\AOC-IDS\.venv\Lib\site-packages\torch\nn\modules\module.py", line 1794, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hassan\TVCL_NEW\pythonProject1\real_deepseek\OK_MAR\tvcl_intas_new.py", line 205, in forward
+    logits_tau = logits_tau + mh_bias                                   # [T, N, N]
+                 ~~~~~~~~~~~^~~~~~~~~
+RuntimeError: The size of tensor a (12) must match the size of tensor b (814) at non-singleton dimension 2
+(.venv) PS C:\Users\hassan\TVCL_NEW\pythonProject1\real_deepseek\OK_MAR> python tvcl_onoff_MAR_F1_MCC.py --data "C:\Users\hassan\TVCL_NEW\pythonProject1\dataset" --seeds 0 --out ab[load] messages=78936  vehicles=814  attack rate=0.194
+[build] snapshots/vehicle: mean=11.76  median=12  frac(>=3)=99.4%  frac(>=4)=99.1%
 0 TVCL (Full) tp/fp/tn/fn=303/26/1507/76 auc=0.946 ap=0.896 f1=0.856 mcc=0.827
-0 w/o MAR tp/fp/tn/fn=303/67/1466/76 auc=0.919 ap=0.839 f1=0.809 mcc=0.763
 0 w/o CSSL tp/fp/tn/fn=316/32/1501/63 auc=0.945 ap=0.905 f1=0.869 mcc=0.840
 0 w/o EAD tp/fp/tn/fn=301/20/1513/78 auc=0.924 ap=0.884 f1=0.860 mcc=0.833
 0 w/o all temporal tp/fp/tn/fn=269/73/1460/110 auc=0.900 ap=0.797 f1=0.746 mcc=0.689
-(.venv) PS C:\Users\hassan\TVCL_NEW\pythonProject1\real_deepseek\OK_MAR>
-0 1 2 3 4 5 6 7 8 9
-
-(.venv) PS C:\Users\hassan\TVCL_NEW\pythonProject1\real_deepseek\OK_MAR> python tvcl_onoff_MAR_F1_MCC.py --data "C:\Users\hassan\TVCL_NEW\pythonProject1\dataset" --seeds 1 --out ablation_test3.csv
-[load] messages=78936  vehicles=814  attack rate=0.194
+(.venv) PS C:\Users\hassan\TVCL_NEW\pythonProject1\real_deepseek\OK_MAR> python tvcl_onoff_MAR_F1_MCC.py --data "C:\Users\hassan\TVCL_NEW\pythonProject1\dataset" --seeds 0 1 2 3 4 5 6 7 8 9--out ablation_test3.csv
+usage: tvcl_onoff_MAR_F1_MCC.py [-h] --data DATA [--seeds SEEDS [SEEDS ...]] [--out OUT] [--epochs EPOCHS] [--no-ablation]
+tvcl_onoff_MAR_F1_MCC.py: error: argument --seeds: invalid int value: '9--out'
+(.venv) PS C:\Users\hassan\TVCL_NEW\pythonProject1\real_deepseek\OK_MAR> python tvcl_onoff_MAR_F1_MCC.py --data "C:\Users\hassan\TVCL_NEW\pythonProject1\dataset" --seeds 1 --out ab[load] messages=78936  vehicles=814  attack rate=0.194
 [build] snapshots/vehicle: mean=11.76  median=12  frac(>=3)=99.4%  frac(>=4)=99.1%
 1 TVCL (Full) tp/fp/tn/fn=330/23/1495/74 auc=0.956 ap=0.900 f1=0.872 mcc=0.844
 1 w/o MAR tp/fp/tn/fn=327/130/1388/77 auc=0.924 ap=0.848 f1=0.760 mcc=0.693
 1 w/o CSSL tp/fp/tn/fn=347/19/1499/57 auc=0.969 ap=0.929 f1=0.901 mcc=0.878
 1 w/o EAD tp/fp/tn/fn=333/22/1496/71 auc=0.957 ap=0.893 f1=0.877 mcc=0.850
 1 w/o all temporal tp/fp/tn/fn=299/87/1431/105 auc=0.916 ap=0.828 f1=0.757 mcc=0.694
+(.venv) PS C:\Users\hassan\TVCL_NEW\pythonProject1\real_deepseek\OK_MAR> python tvcl_onoff_MAR_F1_MCC.py --data "C:\Users\hassan\TVCL_NEW\pythonProject1\dataset" --seeds 2 --out ab[load] messages=78936  vehicles=814  attack rate=0.194
+[build] snapshots/vehicle: mean=11.76  median=12  frac(>=3)=99.4%  frac(>=4)=99.1%
+2 TVCL (Full) tp/fp/tn/fn=315/37/1508/44 auc=0.944 ap=0.850 f1=0.886 mcc=0.860
+2 w/o MAR tp/fp/tn/fn=260/57/1488/99 auc=0.926 ap=0.808 f1=0.769 mcc=0.722
+2 w/o CSSL tp/fp/tn/fn=314/46/1499/45 auc=0.941 ap=0.853 f1=0.873 mcc=0.844
+2 w/o EAD tp/fp/tn/fn=304/40/1505/55 auc=0.929 ap=0.835 f1=0.865 mcc=0.835
+2 w/o all temporal tp/fp/tn/fn=222/38/1507/137 auc=0.911 ap=0.780 f1=0.717 mcc=0.676
+(.venv) PS C:\Users\hassan\TVCL_NEW\pythonProject1\real_deepseek\OK_MAR> python tvcl_onoff_MAR_F1_MCC.py --data "C:\Users\hassan\TVCL_NEW\pythonProject1\dataset" --seeds 3 --out ab[load] messages=78936  vehicles=814  attack rate=0.194
+[build] snapshots/vehicle: mean=11.76  median=12  frac(>=3)=99.4%  frac(>=4)=99.1%
+3 TVCL (Full) tp/fp/tn/fn=306/59/1510/43 auc=0.961 ap=0.875 f1=0.857 mcc=0.825
+3 w/o MAR tp/fp/tn/fn=261/122/1447/88 auc=0.896 ap=0.728 f1=0.713 mcc=0.647
+3 w/o CSSL tp/fp/tn/fn=316/58/1511/33 auc=0.967 ap=0.874 f1=0.874 mcc=0.846
+3 w/o EAD tp/fp/tn/fn=313/49/1520/36 auc=0.973 ap=0.901 f1=0.880 mcc=0.853
+3 w/o all temporal tp/fp/tn/fn=267/43/1526/82 auc=0.950 ap=0.863 f1=0.810 mcc=0.773
+(.venv) PS C:\Users\hassan\TVCL_NEW\pythonProject1\real_deepseek\OK_MAR> python tvcl_onoff_MAR_F1_MCC.py --data "C:\Users\hassan\TVCL_NEW\pythonProject1\dataset" --seeds 4 5 6 7 8 9 --out ablation_test3.csv
+[load] messages=78936  vehicles=814  attack rate=0.194
+[build] snapshots/vehicle: mean=11.76  median=12  frac(>=3)=99.4%  frac(>=4)=99.1%
+4 TVCL (Full) tp/fp/tn/fn=370/85/1426/43 auc=0.974 ap=0.938 f1=0.853 mcc=0.811
+4 w/o MAR tp/fp/tn/fn=320/136/1375/93 auc=0.916 ap=0.808 f1=0.736 mcc=0.661
+4 w/o CSSL tp/fp/tn/fn=378/65/1446/35 auc=0.977 ap=0.949 f1=0.883 mcc=0.851
+4 w/o EAD tp/fp/tn/fn=377/108/1403/36 auc=0.976 ap=0.944 f1=0.840 mcc=0.796
+4 w/o all temporal tp/fp/tn/fn=330/197/1314/83 auc=0.889 ap=0.661 f1=0.702 mcc=0.616
+5 TVCL (Full) tp/fp/tn/fn=325/63/1481/41 auc=0.946 ap=0.885 f1=0.862 mcc=0.829
+5 w/o MAR tp/fp/tn/fn=244/49/1495/122 auc=0.903 ap=0.816 f1=0.741 mcc=0.693
+5 w/o CSSL tp/fp/tn/fn=323/45/1499/43 auc=0.948 ap=0.876 f1=0.880 mcc=0.852
+5 w/o EAD tp/fp/tn/fn=313/37/1507/53 auc=0.951 ap=0.897 f1=0.874 mcc=0.846
+5 w/o all temporal tp/fp/tn/fn=300/52/1492/66 auc=0.928 ap=0.867 f1=0.836 mcc=0.798
+6 TVCL (Full) tp/fp/tn/fn=327/45/1504/37 auc=0.980 ap=0.918 f1=0.889 mcc=0.862
+6 w/o MAR tp/fp/tn/fn=305/107/1442/59 auc=0.959 ap=0.875 f1=0.786 mcc=0.734
+6 w/o CSSL tp/fp/tn/fn=338/23/1526/26 auc=0.985 ap=0.922 f1=0.932 mcc=0.917
+6 w/o EAD tp/fp/tn/fn=333/18/1531/31 auc=0.988 ap=0.936 f1=0.931 mcc=0.916
+6 w/o all temporal tp/fp/tn/fn=322/61/1488/42 auc=0.971 ap=0.907 f1=0.862 mcc=0.829
+7 TVCL (Full) tp/fp/tn/fn=338/45/1476/47 auc=0.964 ap=0.885 f1=0.880 mcc=0.850
+7 w/o MAR tp/fp/tn/fn=300/60/1461/85 auc=0.906 ap=0.771 f1=0.805 mcc=0.759
+7 w/o CSSL tp/fp/tn/fn=346/40/1481/39 auc=0.969 ap=0.921 f1=0.898 mcc=0.872
+7 w/o EAD tp/fp/tn/fn=348/54/1467/37 auc=0.968 ap=0.910 f1=0.884 mcc=0.855
+7 w/o all temporal tp/fp/tn/fn=284/111/1410/101 auc=0.929 ap=0.819 f1=0.728 mcc=0.658
+8 TVCL (Full) tp/fp/tn/fn=326/109/1460/42 auc=0.956 ap=0.855 f1=0.812 mcc=0.767
+8 w/o MAR tp/fp/tn/fn=266/126/1443/102 auc=0.905 ap=0.756 f1=0.700 mcc=0.627
+8 w/o CSSL tp/fp/tn/fn=328/97/1472/40 auc=0.961 ap=0.873 f1=0.827 mcc=0.786
+8 w/o EAD tp/fp/tn/fn=302/41/1528/66 auc=0.956 ap=0.846 f1=0.850 mcc=0.816
+8 w/o all temporal tp/fp/tn/fn=272/145/1424/96 auc=0.888 ap=0.754 f1=0.693 mcc=0.617
+9 TVCL (Full) tp/fp/tn/fn=349/26/1500/60 auc=0.963 ap=0.937 f1=0.890 mcc=0.864
+9 w/o MAR tp/fp/tn/fn=297/96/1430/112 auc=0.912 ap=0.798 f1=0.741 mcc=0.673
+9 w/o CSSL tp/fp/tn/fn=377/18/1508/32 auc=0.968 ap=0.949 f1=0.938 mcc=0.922
+9 w/o EAD tp/fp/tn/fn=360/12/1514/49 auc=0.961 ap=0.941 f1=0.922 mcc=0.904
+9 w/o all temporal tp/fp/tn/fn=303/119/1407/106 auc=0.880 ap=0.745 f1=0.729 mcc=0.655
+
+=== Wilcoxon signed-rank vs. TVCL (Full), n_seeds=6 ===
+w/o MAR               ΔAUC =+0.051(p=0.031)  ΔAP  =+0.107(p=0.031)  ΔF1  =+0.114(p=0.031)  ΔMCC =+0.138(p=0.031)
+w/o CSSL              ΔAUC =-0.005(p=0.031)  ΔAP  =-0.011(p=0.094)  ΔF1  =-0.024(p=0.031)  ΔMCC =-0.031(p=0.031)
+w/o EAD               ΔAUC =-0.003(p=0.156)  ΔAP  =-0.009(p=0.156)  ΔF1  =-0.022(p=0.156)  ΔMCC =-0.028(p=0.094)
+w/o all temporal      ΔAUC =+0.052(p=0.031)  ΔAP  =+0.084(p=0.031)  ΔF1  =+0.135(p=0.031)  ΔMCC =+0.171(p=0.031)
 (.venv) PS C:\Users\hassan\TVCL_NEW\pythonProject1\real_deepseek\OK_MAR>

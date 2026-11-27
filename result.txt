@@ -31,5 +31,5 @@ node-snapshots with a long-term view: 5851 (67.1%); tracklets eligible for CSSL:
 2 GBM (msg features) auc=0.929
 2 LogReg (msg features) auc=0.938
 2 GBM (+own-history) auc=0.958
-
-
+3 TVCL (Full) tp/fp/tn/fn=296/11/1467/50 auc=0.934 ap=0.914
+3 w/o MAR tp/fp/tn/fn=297/44/1434/49 auc=0.938 ap=0.911
